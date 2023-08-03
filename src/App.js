@@ -9,9 +9,9 @@ function App() {
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
-  .then(res => res.json())
-.then(res => setProducts(res.products))
-.catch(e => setError(true));
+      .then(res => res.json())
+      .then(res => setProducts(res.products))
+      .catch(e => setError(true));
   }, [])
 
   const filteredProduct = useMemo(() => {
@@ -37,11 +37,11 @@ function App() {
   },[products, filteredQuery]);
 
   return (
-    <div className="max-w-md mx-auto bg-green">
+    <div className="max-w-md mx-auto">
 
       <input
         type="text"
-        className="w-full px-4 py-2 mb-4 border rounded-md"
+        className="w-full px-4 py-2 mb-4 border "
         placeholder="wpisz filtrowanie tutaj"
         value={filteredQuery}
         onChange={(e) => setFilteredQuery(e.target.value)}
