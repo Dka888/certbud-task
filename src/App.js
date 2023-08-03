@@ -37,7 +37,7 @@ function App() {
   },[products, filteredQuery]);
 
   return (
-    <div className="max-w-md mx-auto bg-black">
+    <div className="max-w-md mx-auto bg-green">
 
       <input
         type="text"
